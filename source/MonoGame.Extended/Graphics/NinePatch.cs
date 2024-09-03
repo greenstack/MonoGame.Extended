@@ -114,7 +114,8 @@ public class NinePatch
 
         _patches = patches;
         Rectangle mid = patches[NinePatch.Middle].Bounds;
-        Padding = new Thickness(mid.Left, mid.Top, mid.Right, mid.Bottom);
+        Rectangle bottomRight = patches[NinePatch.BottomRight].Bounds;
+        Padding = new Thickness(mid.Left, mid.Top, bottomRight.Width, bottomRight.Height);
         Name = name;
     }
 }
